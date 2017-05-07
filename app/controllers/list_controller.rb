@@ -4,6 +4,9 @@ class ListController < ApplicationController
     @assignment_one_pomodoro_estimate = "4 pomodoros"
   end
 
+  def show
+  end
+  
   def first
   end
   
