@@ -5,12 +5,11 @@ class ListController < ApplicationController
   end
 
   def show
+    @list =List.find_by_id(params['id'])
     @id = params['id']
     
     if params['id'] == "1"
       #todo list one
-      @list_name = "Homework"
-      
       @first_todo_description = "Complete all missed assignments - Physics"
       @first_todo_pomodoro_estimate = "4 pomodoros"
       
@@ -22,8 +21,6 @@ class ListController < ApplicationController
     
     elsif params['id'] == "2"
       #todo list two
-      @list_name = "Chores"
-      
       @first_todo_description = "Laundry"
       @first_todo_pomodoro_estimate = "2 pomodoros"
       
