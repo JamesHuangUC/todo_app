@@ -31,4 +31,14 @@ class ListController < ApplicationController
       @third_todo_pomodoro_estimate = "2 pomodoros"
     end
   end
+  
+  def new
+  end
+  
+  def create
+    l = List.new
+    l.name = params['name']
+    l.save
+    redirect_to "/list/#{ l.id }"
+  end
 end
