@@ -5,9 +5,9 @@ class ListController < ApplicationController
   end
 
   def show
-    if params['id'] == 1
-      @id = params['id']
-      
+    @id = params['id']
+    
+    if params['id'] == "1"
       #todo list one
       @list_name = "Homework"
       
@@ -20,7 +20,7 @@ class ListController < ApplicationController
       @third_todo_description = "Complete lab assignment #4 - AP Computer Science"
       @third_todo_pomodoro_estimate = "3 pomodoros"
     
-    elsif params['id'] == 2
+    elsif params['id'] == "2"
       #todo list two
       @list_name = "Chores"
       
